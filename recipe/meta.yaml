@@ -11,7 +11,7 @@ source:
   sha256: 48edff8f498ea7c5c6d8057c6f001a2ce394acd0923b921c56b76fb732e11df3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - hist=hist.classichist:main
@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools_scm
   run:
     - boost-histogram ~=0.11.0
     - histoprint >=1.4
