@@ -11,7 +11,7 @@ source:
   sha256: 8fb8ddf90d4b33c1c941a7ba4fb5cf8d381eae568f368c1ec1f6152967a9b065
 
 build:
-  number: 1
+  number: 2
   noarch: python
   entry_points:
     - hist=hist.classichist:main
@@ -30,7 +30,7 @@ requirements:
     # Actually only required for [py<38] but require for all Python versions so this can be noarch: python
     - typing-extensions
     # The plot requirements - could be changed eventually to be hist-core and hist
-    - matplotlib >=3.0
+    - matplotlib-base >=3.0
     - mplhep >=0.2.2
     - scipy >=1.4
     - uncertainties >=3
