@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - setuptools_scm
   run:
-    - boost-histogram ~=0.13.0
+    - boost-histogram ~=1.0.0
     - histoprint >=1.6
     - numpy >=1.13.3
     - python >=3.6
