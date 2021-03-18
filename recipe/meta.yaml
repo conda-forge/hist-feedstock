@@ -1,5 +1,5 @@
 {% set name = "hist" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hist-{{ version }}.tar.gz
-  sha256: 0de95877b64e2968dbec5267786e6b5d327045152c46d4e387cc9b5181a9d4b3
+  sha256: 7b6ab2032b73c77e0559226610b8913c296f429cb3ac0705fa4db55e6a6004f1
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - setuptools_scm
   run:
-    - boost-histogram ~=1.0.0
+    - boost-histogram ~=1.0.1
     - histoprint >=1.6
     - numpy >=1.13.3
     - python >=3.6
@@ -53,6 +53,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - chrisburr
-    - henryiii
+    - conda-forge/scikit-hep
     - LovelyBuggies
