@@ -115,6 +115,5 @@ Feedstock Maintainers
 =====================
 
 * [@LovelyBuggies](https://github.com/LovelyBuggies/)
-* [@chrisburr](https://github.com/chrisburr/)
-* [@henryiii](https://github.com/henryiii/)
+* [@conda-forge/scikit-hep](https://github.com/conda-forge/scikit-hep/)
 
