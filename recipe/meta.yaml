@@ -53,6 +53,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - chrisburr
-    - henryiii
+    - conda-forge/scikit-hep
     - LovelyBuggies
