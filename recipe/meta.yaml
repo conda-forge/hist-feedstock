@@ -1,5 +1,5 @@
 {% set name = "hist" %}
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hist-{{ version }}.tar.gz
-  sha256: 3be183cb7e36247e56bbecaa278ee70e7c81d6f984c0fd01e26d367866f7f66d
+  sha256: a9692668ff0f5e9d381e99e7df501962e6b28dd77b5d3d309ef1b3de3cb634cd
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - python >=3.6
     - setuptools_scm
   run:
-    - boost-histogram ~=1.0.1
+    - boost-histogram ~=1.1.0
     - histoprint >=1.6
     - numpy >=1.13.3
     - python >=3.6
