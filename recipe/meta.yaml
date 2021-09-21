@@ -33,7 +33,6 @@ requirements:
     - matplotlib-base >=3.0
     - mplhep >=0.2.16
     - scipy >=1.4
-    - uncertainties >=3
     - more-itertools
     - iminuit >=2.0
 
