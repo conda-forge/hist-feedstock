@@ -23,17 +23,19 @@ requirements:
     - python >=3.6
     - setuptools_scm
   run:
-    - boost-histogram ~=1.1.0
-    - histoprint >=1.6
-    - numpy >=1.13.3
-    - python >=3.6
+    - boost-histogram ~=1.2.0
+    - histoprint >=2.2
+    - numpy >=1.14.5
+    - python >=3.7
     # Actually only required for [py<38] but require for all Python versions so this can be noarch: python
     - typing-extensions
     # The plot requirements - could be changed eventually to be hist-core and hist
     - matplotlib-base >=3.0
     - mplhep >=0.2.16
-    - scipy >=1.1
+    - scipy >=1.4
     - uncertainties >=3
+    - more-itertools
+    - iminuit >=2.0
 
 test:
   imports:
