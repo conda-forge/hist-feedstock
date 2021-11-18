@@ -1,5 +1,5 @@
 {% set name = "hist" %}
-{% set version = "2.5.1" %}
+{% set version = "2.5.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hist-{{ version }}.tar.gz
-  sha256: f6907eb192ffcde560db791c25624daa169ca8fc79ae4144c03b2cf79f81a337
+  sha256: 0bafb8b956cc041f1b26e8f5663fb8d3b8f7673f56336facb84d8cfdc30ae2cf
 
 build:
   number: 0
@@ -33,7 +33,6 @@ requirements:
     - matplotlib-base >=3.0
     - mplhep >=0.2.16
     - scipy >=1.4
-    - more-itertools
     - iminuit >=2.0
 
 test:
