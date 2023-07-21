@@ -1,5 +1,5 @@
 {% set name = "hist" %}
-{% set version = "2.6.3" %}
+{% set version = "2.7.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hist-{{ version }}.tar.gz
-  sha256: dede097733d50b273af9f67386e6dcccaab77e900ae702e1a9408a856e217ce9
+  sha256: ffbe314c2bd03c342b9f168dce715ad8f36281eb23172a00970882a9344fe988
 
 build:
   number: 0
