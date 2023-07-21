@@ -1,5 +1,5 @@
 {% set name = "hist" %}
-{% set version = "2.6.3" %}
+{% set version = "2.7.1" %}
 
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hist-{{ version }}.tar.gz
-  sha256: dede097733d50b273af9f67386e6dcccaab77e900ae702e1a9408a856e217ce9
+  sha256: ffbe314c2bd03c342b9f168dce715ad8f36281eb23172a00970882a9344fe988
 
 build:
   number: 0
   noarch: python
   entry_points:
     - hist=hist.classichist:main
-  script: {{ PYTHON }} -m pip install ".[plot]" -vv
+  script: {{ PYTHON }} -m pip install ".[plot,fit]" -vv
 
 requirements:
   host:
@@ -28,11 +28,12 @@ requirements:
     - histoprint >=2.2
     - numpy >=1.14.5
     - python >=3.7
-    # Actually only required for [py<38] but require for all Python versions so this can be noarch: python
+    # Actually only required for [py<311] but require for all Python versions so this can be noarch: python
     - typing-extensions
     # The plot requirements - could be changed eventually to be hist-core and hist
     - matplotlib-base >=3.0
     - mplhep >=0.2.16
+    # The fit plot requirements - could be changed eventually to be hist-core and hist
     - scipy >=1.4
     - iminuit >=2.0
 
