@@ -18,7 +18,7 @@ outputs:
       noarch: python
       entry_points:
         - hist=hist.classichist:main
-      script: {{ PYTHON }} -m pip install ".[plot,fit]" -vv
+      script: python -m pip install . -vv
 
     requirements:
       host:
@@ -46,10 +46,10 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage('hist-core', exact=True) }}
-        # The plot requirements - could be changed eventually to be hist-core and hist
+        # The plot requirements
         - matplotlib-base >=3.0
         - mplhep >=0.2.16
-        # The fit plot requirements - could be changed eventually to be hist-core and hist
+        # The fit plot requirements
         - scipy >=1.4
         - iminuit >=2.0
 
