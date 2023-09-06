@@ -11,42 +11,53 @@ source:
   sha256: ffbe314c2bd03c342b9f168dce715ad8f36281eb23172a00970882a9344fe988
 
 build:
-  number: 0
-  noarch: python
-  entry_points:
-    - hist=hist.classichist:main
-  script: {{ PYTHON }} -m pip install ".[plot,fit]" -vv
+  number: 1
+outputs:
+  - name: hist-base
+    build:
+      noarch: python
+      entry_points:
+        - hist=hist.classichist:main
+      script: python -m pip install . -vv
 
-requirements:
-  host:
-    - pip
-    - python >=3.7
-    - hatchling
-    - hatch-vcs
-  run:
-    - boost-histogram ~=1.3.1
-    - histoprint >=2.2
-    - numpy >=1.14.5
-    - python >=3.7
-    # Actually only required for [py<311] but require for all Python versions so this can be noarch: python
-    - typing-extensions
-    # The plot requirements - could be changed eventually to be hist-core and hist
-    - matplotlib-base >=3.0
-    - mplhep >=0.2.16
-    # The fit plot requirements - could be changed eventually to be hist-core and hist
-    - scipy >=1.4
-    - iminuit >=2.0
+    requirements:
+      host:
+        - pip
+        - python >=3.7
+        - hatchling
+        - hatch-vcs
+      run:
+        - boost-histogram ~=1.3.1
+        - histoprint >=2.2
+        - numpy >=1.14.5
+        - python >=3.7
+        # Actually only required for [py<311] but require for all Python versions so this can be noarch: python
+        - typing-extensions
 
-test:
-  imports:
-    - hist
-    - hist.axis
-  commands:
-    - pip check
-    - hist --help
-  requires:
-    - pip
+    test:
+      imports:
+        - hist
+        - hist.axis
+        
+  - name: hist
+    build:
+      noarch: python
 
+    requirements:
+      run:
+        - {{ pin_subpackage('hist-base', exact=True) }}
+        # The plot requirements
+        - matplotlib-base >=3.0
+        - mplhep >=0.2.16
+        # The fit plot requirements
+        - scipy >=1.4
+        - iminuit >=2.0
+
+    test:
+      imports:
+        - hist
+        - hist.axis
+        
 about:
   home: https://github.com/scikit-hep/hist
   summary: Hist classes and utilities
