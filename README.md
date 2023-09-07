@@ -28,6 +28,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-hist-green.svg)](https://anaconda.org/conda-forge/hist) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hist.svg)](https://anaconda.org/conda-forge/hist) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hist.svg)](https://anaconda.org/conda-forge/hist) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hist.svg)](https://anaconda.org/conda-forge/hist) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-hist--base-green.svg)](https://anaconda.org/conda-forge/hist-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hist-base.svg)](https://anaconda.org/conda-forge/hist-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hist-base.svg)](https://anaconda.org/conda-forge/hist-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hist-base.svg)](https://anaconda.org/conda-forge/hist-base) |
 
 Installing hist
 ===============
@@ -39,16 +40,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `hist` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `hist, hist-base` can be installed with `conda`:
 
 ```
-conda install hist
+conda install hist hist-base
 ```
 
 or with `mamba`:
 
 ```
-mamba install hist
+mamba install hist hist-base
 ```
 
 It is possible to list all of the versions of `hist` available on your platform with `conda`:
