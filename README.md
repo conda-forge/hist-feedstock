@@ -9,6 +9,10 @@ Package license: BSD-3-Clause
 
 Summary: Hist classes and utilities
 
+Development: https://github.com/scikit-hep/hist
+
+Documentation: https://hist.readthedocs.io/
+
 Current build status
 ====================
 
