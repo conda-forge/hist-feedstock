@@ -18,11 +18,10 @@ build:
 outputs:
   - name: hist-base
     build:
-      noarch: python
       entry_points:
         - hist=hist.classichist:main
       # c.f. https://github.com/conda/grayskull/issues/582#issuecomment-2482370940
-      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+      script: python -m pip install . -vv --no-deps --no-build-isolation
 
     requirements:
       host:
@@ -49,8 +48,6 @@ outputs:
         - pip
 
   - name: hist
-    build:
-      noarch: python
 
     requirements:
       run:
