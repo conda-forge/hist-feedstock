@@ -22,7 +22,7 @@ outputs:
       entry_points:
         - hist=hist.classichist:main
       # c.f. https://github.com/conda/grayskull/issues/582#issuecomment-2482370940
-      script: python -m pip install . -vv --no-deps --no-build-isolation
+      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
     requirements:
       host:
