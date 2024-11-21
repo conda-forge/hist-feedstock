@@ -13,6 +13,8 @@ source:
 
 build:
   number: 2
+  noarch: python
+
 outputs:
   - name: hist-base
     build:
