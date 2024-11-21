@@ -21,6 +21,7 @@ outputs:
       entry_points:
         - hist=hist.classichist:main
       # c.f. https://github.com/conda/grayskull/issues/582#issuecomment-2482370940
+      # FIXME: For unknown reasons, use of '{{ PYTHON }} -m pip' fails here
       script: python -m pip install . -vv --no-deps --no-build-isolation
 
     requirements:
