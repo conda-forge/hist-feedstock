@@ -1,5 +1,5 @@
 {% set name = "hist" %}
-{% set version = "2.8.0" %}
+{% set version = "2.8.1" %}
 {% set python_min = "3.8" %}
 
 
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hist-{{ version }}.tar.gz
-  sha256: 0a3e602dd1d2721bd7f2229f456709dde323f6f74952f13ba4e5986c3275f77b
+  sha256: 7da7c900e2ef6d425793da1a9adac424ebc013a8eabf29b24301f70898218d9d
 
 build:
-  number: 3
+  number: 0
   noarch: python
 
 outputs:
