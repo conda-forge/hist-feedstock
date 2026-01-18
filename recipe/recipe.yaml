@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: hist
-  version: "2.9.1"
+  version: "2.9.2"
   python_min: "3.9"
 
 recipe:
@@ -11,7 +11,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/hist-${{ version }}.tar.gz
-  sha256: 923c73b6c4d51227175cc827937bca979160bfe831ca099926650f70f69b5b6b
+  sha256: 67bf80e15bb1ab99f89ccf6588efa357d16826d691043b726165c78334a9067b
 
 build:
   number: 0
