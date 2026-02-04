@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: hist
-  version: "2.9.2"
-  python_min: "3.9"
+  version: "2.10.0"
+  python_min: "3.10"
 
 recipe:
   name: ${{ name|lower }}-suite
@@ -11,7 +11,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/hist-${{ version }}.tar.gz
-  sha256: 67bf80e15bb1ab99f89ccf6588efa357d16826d691043b726165c78334a9067b
+  sha256: b757f1e690877b52700b32bcd2998db53cf4e544637cc8de16c28d9d8a9f36bf
 
 build:
   number: 0
@@ -36,10 +36,11 @@ outputs:
         - hatchling
         - hatch-vcs
       run:
-        - boost-histogram >=1.5,<1.7
+        - boost-histogram >=1.6,<1.8
         - histoprint >=2.2
-        - numpy >=1.19.3
+        - numpy >=1.21.3
         - python >=${{ python_min }}
+        - packaging >=23.0
         # Actually only required for [py<311] but require for all Python versions so this can be noarch: python
         - typing-extensions >=4
 
@@ -64,11 +65,11 @@ outputs:
       run:
         - ${{ pin_subpackage('hist-base', exact=True) }}
         # The plot requirements
-        - matplotlib-base >=3.3.3
-        - mplhep >=0.3.17
+        - matplotlib-base >=3.10.7
+        - mplhep >=0.3.33
         # The fit plot requirements
-        - scipy >=1.5.4
-        - iminuit >=2.0
+        - scipy >=1.7
+        - iminuit >=2.9
         # Satisfy linter but not used
         - python >=${{ python_min }}
 
